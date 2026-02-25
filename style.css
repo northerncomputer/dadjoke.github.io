@@ -38,8 +38,37 @@ body {
     text-align: center;
 }
 
+/* High resolution displays (4K TVs, high-DPI monitors) */
+@media (min-width: 2560px) {
+    .container {
+        max-width: 2000px;
+    }
+    
+    .joke-text {
+        font-size: 8rem;
+        padding: 120px;
+    }
+}
+
+/* Ultra-wide 4K displays */
+@media (min-width: 3840px) {
+    .joke-text {
+        font-size: 10rem;
+        padding: 150px;
+    }
+}
+
 /* Responsive design */
-@media (max-width: 768px) {
+/* Desktop/laptop screens */
+@media (max-width: 1920px) and (min-width: 1024px) {
+    .joke-text {
+        font-size: 4.5rem;
+        padding: 80px;
+    }
+}
+
+/* Tablet screens */
+@media (max-width: 1023px) and (min-width: 769px) {
     .container {
         padding: 30px 20px;
         margin: 10px;
@@ -51,7 +80,8 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+/* Mobile screens */
+@media (max-width: 768px) {
     .joke-text {
         font-size: 2.8rem;
         padding: 30px;
